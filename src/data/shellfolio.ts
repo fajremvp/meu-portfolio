@@ -88,7 +88,7 @@ export const data: PortfolioData = {
       Online: "john",
       Uptime: "25 years",
       Location: "Earth",
-      Role: "Sysadmin & Desenvolvedor",
+      Role: "Sysadmin & Developer",
       Status: "Open to work",
       OS: "Arch Linux x86_64",
       Host: "ThinkPad T14",
