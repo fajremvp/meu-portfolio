@@ -14,11 +14,6 @@ export interface Profile {
   about: string;
 }
 
-export interface Skill {
-  category: string;
-  items: string;
-}
-
 export interface Experience {
   perms: string;
   date: string;
@@ -42,6 +37,11 @@ export interface Education {
   content: string;
 }
 
+export interface Skill {
+  category: string;
+  items: string;
+}
+
 export interface Remote {
   name: string;
   url: string;
@@ -56,10 +56,10 @@ export interface UIStrings {
 
 export interface LanguageData {
   profile: Profile;
-  skills: Skill[];
   experiences: Experience[];
   projects: Project[];
   education: Education[];
+  skills: Skill[];
   remotes: Remote[];
   ui: UIStrings;
 }
@@ -97,10 +97,6 @@ export const data: PortfolioData = {
       WM: "Hyprland",
       about: `Hello, World! I am a software engineer and open-source enthusiast.\nI specialize in building minimal, fast, and secure tools for the modern web.`
     },
-    skills: [
-      { category: "Languages", items: "TypeScript, Go, Rust, Python, Bash" },
-      { category: "Infra", items: "Docker, Kubernetes, Linux, Nginx, Ansible" }
-    ],
     experiences: [
       {
         perms: "drwxr-xr-x",
@@ -121,6 +117,10 @@ export const data: PortfolioData = {
         perms: "drwxr-xr-x", date: "2018-2022", institution: "University of Technology", folder: "Computer Science",
         content: "Bachelor of Science in Computer Science."
       }
+    ],
+    skills: [
+      { category: "Languages", items: "TypeScript, Go, Rust, Python, Bash" },
+      { category: "Infra", items: "Docker, Kubernetes, Linux, Nginx, Ansible" }
     ],
     remotes: [
       { name: "github", url: "git@github.com:johndoe/repo.git", webLink: "https://github.com/johndoe" }
@@ -146,10 +146,6 @@ export const data: PortfolioData = {
       WM: "Hyprland",
       about: `Olá, Mundo! Sou engenheiro de software e entusiasta open-source.\nEspecializado em criar ferramentas minimalistas e seguras.`
     },
-    skills: [
-      { category: "Linguagens", items: "TypeScript, Go, Rust, Python, Bash" },
-      { category: "Infra", items: "Docker, Kubernetes, Linux, Nginx, Ansible" }
-    ],
     experiences: [
       {
         perms: "drwxr-xr-x",
@@ -170,6 +166,10 @@ export const data: PortfolioData = {
         perms: "drwxr-xr-x", date: "2018-2022", institution: "Universidade de Tecnologia", folder: "Ciencia da Computacao",
         content: "Bacharelado em Ciência da Computação."
       }
+    ],
+    skills: [
+      { category: "Linguagens", items: "TypeScript, Go, Rust, Python, Bash" },
+      { category: "Infra", items: "Docker, Kubernetes, Linux, Nginx, Ansible" }
     ],
     remotes: [
       { name: "github", url: "git@github.com:johndoe/repo.git", webLink: "https://github.com/johndoe" }
