@@ -26,7 +26,7 @@ export const siteConfig = {
     skills: true,
     remotes: true,
     contact: true,
-    wallets: true,   // Set to false by default for generic users
+    wallets: false,   // Set to false by default for generic users
     torMirror: false, // Set to false by default for generic users
   },
 
