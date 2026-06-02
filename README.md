@@ -112,11 +112,11 @@ The following files control most of the site's content and behavior.
 #### 1. `src/config/site.config.ts` (Behavior & UI)
 This file controls the global settings, SEO, and which sections are rendered on the screen.
 
-* **Branding & SEO:** Update `author`, `title`, `description`, and `siteUrl` so link previews look correct when shared.
-* **Terminal Prompt:** Change the `user` and `host` to customize the green prompt string (e.g., `fajre@shellfolio`).
-* **Feature Toggles:** Enable or disable entire sections of the portfolio by flipping the booleans in the `features` object (e.g., set `wallets: false` to hide the crypto section).
-* **Single Language Mode:** Set `translations: false` to disable the Portuguese locale, keeping the site strictly in English and removing the language switcher.
-* **ASCII Art:** Replace the `asciiArt` template literal with your own text art.
+- **Branding & SEO:** Update `author`, `title`, `description`, and `siteUrl` so link previews look correct when shared.
+- **Terminal Prompt:** Change the `user` and `host` to customize the green prompt string (e.g., `fajre@shellfolio`).
+- **Feature Toggles:** Enable or disable entire sections of the portfolio by flipping the booleans in the `features` object (e.g., set `wallets: false` to hide the crypto section).
+- **Single Language Mode:** Set `translations: false` to disable the Portuguese locale, keeping the site strictly in English and removing the language switcher.
+- **ASCII Art:** Replace the `asciiArt` template literal with your own text art.
 
   > 💡 **Tip:** Want to generate ASCII art from a profile picture? Remove the background of a profile picture and use a tool like `jp2a` to convert it to ASCII:
   > ```bash
@@ -124,7 +124,7 @@ This file controls the global settings, SEO, and which sections are rendered on 
   > ```
 
 #### 2. `src/data/shellfolio.ts` (Your Content)
-This file contains the content displayed throughout the portfolio. It is strictly typed with TypeScript interfaces to ensure you don't miss any required fields. Scroll down past the `// --- Types ---` to find the data you need to edit:
+This file contains the content displayed throughout the portfolio. It is strictly typed with TypeScript interfaces to ensure you don't miss any required fields. Scroll down past the `// --- Data ---` to find the data you need to edit:
 
 * **Global Arrays (`contactLinks` & `paymentMethods`):** Update these lists with your own social handles, URLs, and crypto addresses.
 * **The `data` Object:** This contains your localized content. You will see two main blocks: `en` (English) and `pt` (Portuguese). If you set `translations: false` in your config, you can safely delete the entire `pt` block!
