@@ -29,12 +29,14 @@ import { siteConfig } from '../config/site.config';
     body { background-color: #000000; }
   </style>
 
-  <script is:inline>
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.toLowerCase().startsWith('pt')) {
-      window.location.replace('/pt');
-    }
-  </script>
+  {siteConfig.features.translations && (
+    <script is:inline>
+      const userLang = navigator.language || navigator.userLanguage;
+      if (userLang.toLowerCase().startsWith('pt')) {
+        window.location.replace('/pt');
+      }
+    </script>
+  )}
 </head>
 <body></body>
 </html>

@@ -21,10 +21,9 @@ import LocaleSection from '../../components/sections/LocaleSection.astro';
 import TorSection from '../../components/sections/TorSection.astro';
 
 export function getStaticPaths() {
-  return [
-    { params: { lang: 'pt' } },
-    { params: { lang: 'en' } },
-  ];
+  return siteConfig.features.translations
+    ? [{ params: { lang: 'en' } }, { params: { lang: 'pt' } }]
+    : [{ params: { lang: 'en' } }];
 }
 
 const { lang } = Astro.params;
@@ -58,7 +57,7 @@ if (!t) {
 
     {siteConfig.features.wallets && <WalletsSection wallets={paymentMethods} />}
 
-    <LocaleSection lang={lang} t={t} />
+    {siteConfig.features.translations && <LocaleSection lang={lang} t={t} />}
 
     {siteConfig.features.torMirror && <TorSection />}
 

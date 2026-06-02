@@ -26,8 +26,9 @@ export const siteConfig = {
     skills: true,
     remotes: true,
     contact: true,
-    wallets: false,   // Set to false by default for generic users
-    torMirror: false, // Set to false by default for generic users
+    wallets: false,   	// Set to false by default for generic users
+    translations: true, // Set to false to disable the locale switcher and PT routing
+    torMirror: false, 	// Set to false by default for generic users
   },
 
   // Sensitive/Specific Data
